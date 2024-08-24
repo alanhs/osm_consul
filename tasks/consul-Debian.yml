@@ -33,7 +33,7 @@
 
 - name: Including file for consul user
   when: (group_names[0] == "consul-leader") or (group_names[0] == "consul-server") or (group_names[0] == "consul-client")
-  include: consul-user.yml
+  include_tasks: consul-user.yml
 
 - name: Creating a Consul service file
   when: (group_names[0] == "consul-leader") or (group_names[0] == "consul-server") or (group_names[0] == "consul-client")
