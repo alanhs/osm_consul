@@ -2,4 +2,4 @@
 
 - name: Include OS Specific setup file
   when: ansible_os_family == "Debian"
-  include: consul-Debian.yml
+  include_tasks: consul-Debian.yml
